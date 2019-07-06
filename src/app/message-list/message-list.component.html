@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let message of messages">
+    <b>Id: </b> {{ message.id }}
+    <b>Mensagem: </b> {{ message.text }}
+    <b>Data de envio: </b> {{ message.created | date: 'dd/MM/yyyy HH:mm:ss' }}
+    <button (click)="apagar(message.id)">Apagar</button>
+  </li>
+</ul>
